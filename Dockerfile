@@ -1,6 +1,4 @@
-from node:15
+from node:13-slim
 workdir /app
-copy package.json .
-run npm install
-copy . ./
-cmd ['node', 'index.js']
+add . /app
+cmd node server.js
